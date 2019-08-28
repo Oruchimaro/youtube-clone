@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <style>
             html, body {
                 background-color: #fff;
@@ -81,19 +82,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    This is the shop
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, earum alias. Culpa tenetur atque sapiente. Dignissimos, consequatur corporis quis unde veritatis fugiat quod eum nisi vitae fuga non consequuntur labore?
+                </p>
             </div>
         </div>
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

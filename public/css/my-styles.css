@@ -1,0 +1,26 @@
+#logo
+{
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+}
+
+main
+{
+    margin-top: 100px;
+}
+
+.change-link-color
+{
+
+    padding: 5px;
+}
+
+.change-link-color:hover
+{
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(236, 232, 232);
+    font-weight: bold;
+    font-size: 1em;
+}
