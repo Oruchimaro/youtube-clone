@@ -16,5 +16,16 @@ class Product extends Model
         'pro_image',
         'pro_info',
         'sale_price',
+        'category_id'
     ];
+
+    public function categories()
+    {
+        return $this->belongsToMany('Category', 'categories');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

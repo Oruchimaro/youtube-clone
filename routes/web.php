@@ -33,7 +33,15 @@ Route::get('/product_detailes/{id}', 'HomeController@product_detailes');
 
 /**Shopping cart routes */
 Route::get('/cart', 'CartController@index');
+Route::get('/cart/addItem/{id}', 'CartController@addItem');
+Route::get('/cart/remove/{id}', 'CartController@destroy');
+Route::put('/cart/update/{id}', 'CartController@update');
 /**End of Shopping cart routes*/
+
+/**Checkout routes */
+Route::get('/checkout', 'CheckoutController@index');
+
+Route::post('/formvalidate', 'CheckoutController@formValidate');
 
 
 Route::get('/about', function (){
@@ -57,8 +65,24 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
         return view('admin.index');
     })->name('admin.index');
 
+
+Route::resource('category', 'categoriesController');
+
+
     // Route::post('/', 'AdminController@index')->name('admin.index');
     // Route::post('/store', 'AdminController@store')->name('admin.store');
 
     Route::resource('product', 'ProductsController');
+});
+
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/checkout', 'CheckoutController@index');
+    Route::post('/formValidate', 'CheckoutController@formValidate');
+    Route::get('/orders', 'ProfileController@orders');
+    Route::get('/address', 'ProfileController@address');
+    Route::post('/password', 'ProfileController@updatePassword');
+    Route::get('/thankyou', function(){
+        return view('profile.thankyou');
+    });  
 });

@@ -55,6 +55,7 @@
     </ul>
 
     {{--  <li class="list-inline-item"><a href="  {{ url('/login') }}  "> Login </a></li>  --}}
+     <li class="list-inline-item"><a href="  {{ url('/cart') }}  "> View Cart <i class="fa fa-shopping-cart"></i> ({{Cart::count() }}) ({{Cart::total() }})</a></li> 
 
     <form class="form-inline my-2 my-lg-0">
     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
